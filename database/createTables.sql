@@ -20,7 +20,7 @@ CREATE TABLE shopingCart (
 	userId INT(5),
     productId INT(5),
     quantity INT,
-    PRIMARY KEY (userId, productId) 
+    PRIMARY KEY (userId, productId) http://localhost:3000/
 );
 
 CREATE TABLE orders (

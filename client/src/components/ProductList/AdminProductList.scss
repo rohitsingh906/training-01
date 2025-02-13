@@ -1,9 +1,17 @@
 /* AdminProductList.scss */
 
 .product-list-container {
+    background:cover;
     // max-width: 800px;
-    // margin: 0 auto;
-    // padding: 20px;
+    width:100%;
+    margin: 0;
+    padding: 0px;
+}
+.login-Button{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-right: 40%;
 }
 
 .add-product-section {
@@ -70,3 +78,96 @@
 .product-list button:hover {
     background-color: #d32f2f;
 }
+
+
+//dashboard styling
+
+#dashboardMainContainer{
+    display: flex;
+    flex-direction:row;
+}
+.dashboard_sidebar{
+    width:20%;
+    background:#371a1a;
+    height:100vh;
+}
+.dashboard_content_container{
+    width:80%;
+    background: #c3c8d0;
+}
+.dashboard_logo{
+    color:#f685a1;
+    font-size:80px;
+    text-align:center;
+    height: 3vh;
+    margin-top: 15px;
+}
+.dashboard_sidebar_user{
+    position:auto;
+    text-align:center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+.dashboard_sidebar_user img{
+    width:80px;
+    display: inline-block;
+    border-radius: 200%;
+    border:2px solid #f685a1;
+    vertical-align: bottom;
+    margin-left:30px;
+}
+.dashboard_sidebar_user span{
+    font-size:18px;
+    text-transform:uppercase;
+    color:#fff;
+    margin-left: 1px;
+    display:inline-block;
+}
+.dashboard_menu_lists{
+    margin-top:20px;
+}
+
+.dashboard_menu_lists li{
+    padding: 15px 15px;
+    text-transform: uppercase;
+    list-style: none;
+    text-align: center;
+}
+.dashboard_menu_lists li a{
+    list-style-type: none;
+    color: #fff;
+    display: block;
+    font-size: 20px;
+}
+.dashboard_menu_lists li a i{
+    font-size: 25px;
+}
+.dashboard_menu_lists li.menuActive{
+    background:#f685a1;
+    color:#fff;
+}
+.dashboard_menu_lists li:hover{
+    background-color: #f685a1;
+    color:#fff;
+    transition:0.3s all;
+}
+.dashboard_topNav{
+    background:#fff;
+    padding:4px;
+}
+.dashboard_topNav a{
+    color:#0d0c0c;
+    font-size:18px;
+    text-decoration:none;
+}
+#logoutBtn{
+    float:right;
+}
+.dashboard_content{
+    padding: 50px 10px 10px 10px; 
+}
+.dashboard_content_main{
+    background:#fff;
+    min-height: 500px ;
+    height:80%;
+} 

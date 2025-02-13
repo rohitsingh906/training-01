@@ -1,6 +1,15 @@
 // AdminContainer.scss
 
+.product-list-container{
+    font-family:arial;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    
+}
 .admin-container {
+    
+    background:pink;
     padding: 20px;
 
     button {

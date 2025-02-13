@@ -30,25 +30,15 @@ function App() {
     setCustomerId(undefined);
   };
   return (
-    <div >
+    <div class="background">
       {!isUserAuthenticated ? (
         <LoginRegisterForm setUserAuthenticatedStatus={setUserAuthenticatedStatus} />
       ) : (
         <>
-            <div className="login-button-container"><button
-              onClick={handleLogout}
-              // style={{
-              //   backgroundColor: 'black',
-              //   color: 'white',
-              //   border: 'none',
-              //   padding: '10px 20px',
-              //   borderRadius: '5px',
-              //   cursor: 'pointer'
-              // }}
-              className="login-button"
-            >
-              Logout
-            </button></div>
+            <div className="product-list-container1">
+            <button onClick={handleLogout} className="login-button"><i class="fa fa-power-off"></i>Logout</button>
+            {/* <a onClick={handkeLogiut} className="login-button"><i class="fa fa-power-off"></i>Log out</a> */}
+            </div>
 
           <AdminCustomerContainer isAdmin={isAdmin} customerId={customerId} />
         </>

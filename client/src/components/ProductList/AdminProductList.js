@@ -52,7 +52,8 @@ const ProductList = (props) => {
       .catch((err) => console.log("Couldn't receive list"));
   };
 
-  return (
+  return (    
+    
     <div className="product-list-container">
       <div className="add-product-section">
         <label htmlFor="productName">Product Name:</label>

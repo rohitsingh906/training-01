@@ -1,40 +1,211 @@
-// login-Register.scss
-.login-Register-container {
+// // login-Register.scss
+// .login-Register-container {
+//     background:rgb(78, 126, 236);
+//     width:100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background-size: cover;
+//     font-family:arial;
+
+//     .form-container {
+//         margin-top: 10%;
+//         max-width: 400px;
+//         width: 100%;
+//         padding: 20px;
+//         border: 1px solid #ccc;
+//         border-radius: 5px;
+//         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+
+//         .logo {
+//             margin-bottom: 20px;
+//             text-align: center;
+
+//             img {
+//                 max-width: 100%;
+//                 height: auto;
+//             }
+//         }
+
+//         // Styling for switching between login and register
+//         .switch-link {
+//             display: block;
+//             text-align: center;
+//             margin-top: 20px;
+//             color: #333;
+//             text-decoration: underline;
+//             cursor: pointer;
+
+//             &:hover {
+//                 color: #555;
+//             }
+//         }
+//     }
+// }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.auth-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #388ac4, #feb47b);
+    font-family: 'Poppins', sans-serif;
 
-    .form-container {
-        max-width: 400px;
-        width: 100%;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    // Left Side - Branding
+    .auth-branding {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 50px;
+        animation: slideIn 0.8s ease-in-out;
 
-        .logo {
+        .auth-logo {
+            max-width: 60%;
+            margin-bottom:0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.9;
             margin-bottom: 20px;
-            text-align: center;
+        }
+    }
 
-            img {
-                max-width: 100%;
-                height: auto;
+    // Right Side - Form Container
+    .auth-form-container {
+        // flex: 1
+        // display: flex;
+        display:block;
+        width:25%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:  rgb(0,0,0,0.5);
+        padding: 20px;
+        margin-right:100px;
+        margin-top: 20px;
+        margin-bottom:20px;
+        border-radius: 10px;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+
+        .auth-toggle {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+
+            .toggle-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                color:  #ff7e5f;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                border-bottom: 3px solid #ff7e5f;
+
+                &.active {
+                    color: #ff7e5f;
+        
+                }
+
+                &:hover {
+                    color: #f23f13;
+                    border-bottom: 3px solid #ff7e5f;
+                }
             }
         }
 
-        // Styling for switching between login and register
-        .switch-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-            text-decoration: underline;
-            cursor: pointer;
+        .auth-form {
+            width: 100%;
+            max-width: 350px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #4097d1;
+            animation: fadeIn 0.5s ease-in-out;
 
-            &:hover {
-                color: #555;
+            input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                transition: 0.3s;
+
+                &:focus {
+                    border-color: #ff7e5f;
+                    box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+                    outline: none;
+                }
             }
+
+            .login-btn {
+                width: 100%;
+                background:#ff7e5f;
+                color: white;
+                padding: 12px;
+                font-size: 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border: none;
+                font-weight: bold;
+
+                &:hover {
+                    background: #e76b51;
+                    box-shadow: 0 4px 10px rgba(255, 126, 95, 0.3);
+                }
+            }
+        }
+    }
+}
+
+// Animations
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        padding-top: 50px;
+
+        .auth-branding {
+            display: none;
+        }
+
+        .auth-form-container {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     }
 }

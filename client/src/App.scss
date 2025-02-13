@@ -1,21 +1,32 @@
 // Add styling for login button
 .login-button {
-
-
-  background-color: black;
+  background-color: rgb(10, 9, 9);
   color: white;
   border: none;
   padding: 10px 20px;
+  margin-left: 93.3%;
+  margin-top: 0;
+  margin-bottom:0;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
 .login-button-container {
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   flex-direction: row-reverse;
+}
+.background{
+  font-family:arial;
+  width: 100%;
+  margin: 0;
+  overflow: hidden
+}
+.product-list-container1{
+  background: rgb(188, 183, 183);
 }
